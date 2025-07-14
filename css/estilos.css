@@ -1,0 +1,293 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, #F1DEDB, #A3685F);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+body, footer, h1, h2, h3, p, a, button {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+footer {
+  background-color: #A3685F;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+
+body>footer {
+  margin-top: auto;
+  /* Pone el footer al fondo si el contenido es corto */
+}
+
+header {
+  background-color: #BC633E;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  /* Para ubicar el ícono del carrito */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  background-color: #A3685F;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+nav a:hover {
+  background-color: #BC633E;
+  border-radius: 5px;
+}
+
+section {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #333;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card {
+  background: #F1DEDB;
+  color: #333;
+  border: 2px solid #BC633E;
+  padding: 1rem;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(179, 100, 62, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease;
+  /*lo que va a tardar en agrandar las cajitas*/
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.grid-resenas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.resena {
+  background: #A3685F;
+  padding: 1rem;
+  border-radius: 5px;
+  color: white;
+  font-style: italic;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: auto;
+  background-color: #F1DEDB;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(163, 104, 95, 0.4);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #BC633E;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+  background-color: white;
+  color: #333;
+}
+
+form button {
+  padding: 0.7rem;
+  background-color: #BC633E;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background-color: #A3685F;
+  color: #fff;
+}
+
+/*---------segunda parte cuando agrege carrito----------*/
+.icon-carrito {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  display: inline-block;
+}
+
+.icon-carrito svg {
+  color: white;
+}
+
+.count {
+  background-color: #BC633E;
+  color: white;
+  border-radius: 50%;
+  padding: 3px 7px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.tableProduct {
+  background-color: #F1DEDB;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 10px rgba(179, 100, 62, 0.3);
+  text-align: center;
+}
+
+.add-to-cart {
+  background-color: #BC633E;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.6rem 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(179, 100, 62, 0.2);
+}
+
+.add-to-cart:hover {
+  background-color: #A3685F;
+  transform: scale(1.05);
+  color: #fff;
+}
+/*la tabla del carrito*/
+.tableProduct table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(163, 104, 95, 0.3);
+}
+
+.tableProduct th, 
+.tableProduct td {
+  padding: 1rem;
+  border: 1px solid #BC633E;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.tableProduct th {
+  background-color: #A3685F;
+  color: white;
+}
+
+.tableProduct td {
+  background-color: #F1DEDB;
+  color: #333;
+}
+
+.tableProduct tr:hover td {
+  background-color: #f9e4e1;
+}
+
+/* Botones dentro de la tabla */
+.tableProduct .btn-eliminar {
+  background-color: #BC633E;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.3s ease;
+}
+
+.tableProduct .btn-eliminar:hover {
+  background-color: #A3685F;
+}
+
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-container,
+  .tableProduct {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .add-to-cart {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .icon-carrito {
+    right: 1rem;
+    top: 0.5rem;
+  }
+}

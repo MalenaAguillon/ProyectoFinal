@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libreria online</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>El librero</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a class="a1" href="#">Inicio</a>
+                </li>
+                <li>
+                    <a class="a2" href="#productos">Productos</a>
+                </li>
+                <li>
+                    <a class="a3" href="#contacto">Contacto</a>
+                </li>
+                <li>
+                    <a class="a4" href="#resenas">Reseñas</a>
+                </li>
+                <li>
+                    <a class="a5" href="./pages/carrito.html">Carrito</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="icon-carrito">
+            <a href="./carrito.html" onclick="handleCart()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M16 6V4H8v2M7 18c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m10 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-9.8-3.2v-.1l.9-1.7h7.4c.7 0 1.4-.4 1.7-1l3.9-7l-1.7-1l-3.9 7h-7L4.3 2H1v2h2l3.6 7.6L5.2 14c-.1.3-.2.6-.2 1c0 1.1.9 2 2 2h12v-2H7.4c-.1 0-.2-.1-.2-.2" />
+                </svg>
+                <div class="count" id="cart-count">0</div>
+            </a>
+        </div>
+    </header>
+    <main>
+        <section id="inicio">
+            <h2>Bienvenido a nuestra libreria</h2>
+            <p>Venta de libros nuevos, usados y universitarios.</p>
+            <img src="./imagenes/estanteria2.jpeg" alt="Estante con libros" style="width: 100%; height: auto;">
+        </section>
+        <section id="productos" class="productos">
+            <h2>Libros en ventas</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="./imagenes/elprincipito.jpeg" alt="libro 1">
+                    <h3>El principito</h3>
+                    <p>$15000</p>
+                    <button class="add-to-cart" data-title="El principito" data-price="15000">Añadir al carrito</button>
+                </div>
+                <div class="card">
+                    <img src="./imagenes/hp.jpeg" alt="libro 2">
+                    <h3>Harry potter y la piedra filosofal</h3>
+                    <p>$30000</p>
+                    <button class="add-to-cart" data-title="Harry potter y la piedra filosofal"
+                        data-price="30000">Añadir al carrito</button>
+                </div>
+                <div class="card">
+                    <img src="./imagenes/losJDH.jpeg" alt="libro 3">
+                    <h3>Los juegos del hambre</h3>
+                    <p>$30000</p>
+                    <button class="add-to-cart" data-title="Los juegos del hambre" data-price="30000">Añadir al
+                        carrito</button>
+
+                </div>
+                <div class="card">
+                    <img src="./imagenes/el-eternauta.jpeg" alt="libro 4">
+                    <h3>El eternauta</h3>
+                    <p>$30000</p>
+                    <button class="add-to-cart" data-title="El eternauta" data-price="30000">Añadir al carrito</button>
+
+                </div>
+                <div class="card">
+                    <img src="./imagenes/anatomia.jpeg" alt="libro 5">
+                    <h3>Atlas de anatomia humana</h3>
+                    <p>$30000</p>
+                    <button class="add-to-cart" data-title="Atlas de anatomia humana" data-price="30000">Añadir al
+                        carrito</button>
+
+                </div>
+                <div class="card">
+                    <img src="./imagenes/quimica.jpeg" alt="libro 6">
+                    <h3>Quimica general</h3>
+                    <p>$30000</p>
+                    <button class="add-to-cart" data-title="Quimica general" data-price="30000">Añadir al
+                        carrito</button>
+                </div>
+            </div>
+        </section>
+        <section id="resenas" class="resenas">
+            <h2>Reseñas</h2>
+            <div class="grid-resenas">
+                <div class="resena">Excelente atencion y envio rapido</div>
+                <div class="resena">Encontre libros que no hallaba en ningun lado. Lo viejo funciona</div>
+                <div class="resena">Muy buenos precios y variedad academica</div>
+            </div>
+        </section>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form action="https://formspree.io/f/mdkgrkvp" method="POST">
+                <label>Nombre:
+                    <input type="text" name="nombre" required>
+                </label>
+                <label>Email:
+                    <input type="email" name="email" required>
+                </label>
+                <label>Mensaje:
+                    <textarea name="mensaje" required></textarea>
+                </label>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Librería Online - Todos los derechos reservados.</p>
+        <script src="./js/main.js"></script>
+    </footer>
+</body>
+
+</html>

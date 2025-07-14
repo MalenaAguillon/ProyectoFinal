@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Libreria online</title>  
+   <link rel="stylesheet" href="../css/estilos.css">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <header>
+      <h1>El librero</h1>
+      <div class="icon-carrito">
+         <a href="./carrito.html" onclick="handleCart()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+               <path fill="currentColor"
+                  d="M16 6V4H8v2M7 18c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m10 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-9.8-3.2v-.1l.9-1.7h7.4c.7 0 1.4-.4 1.7-1l3.9-7l-1.7-1l-3.9 7h-7L4.3 2H1v2h2l3.6 7.6L5.2 14c-.1.3-.2.6-.2 1c0 1.1.9 2 2 2h12v-2H7.4c-.1 0-.2-.1-.2-.2" />
+            </svg>
+            <div class="count" id="cart-count"></div>
+         </a>
+      </div>
+
+      <nav>
+         <ul>
+            <li>
+               <a class="a1" href="../index.html">Inicio</a>
+            </li>
+            <li>
+               <a class="a2" href="./productos.html">Productos</a>
+            </li>
+            <li>
+               <a class="a3" href="./contactos.html">Contacto</a>
+            </li>
+            <li>
+               <a href="./carrito.html">Carrito</a>
+            </li>
+         </ul>
+      </nav>
+   </header>
+
+   <main>
+      <div id="alert-container" class="container mt-3"></div>
+      <section class="tableProduct" id="item-products">
+         <h2>Sección de productos</h2>
+         <button onclick="limpiarCarrito()" class="add-to-cart">Limpiar carrito</button>
+         <button onclick="FinalizarCompra()" class="add-to-cart">Finalizar compra</button>
+      </section>
+   </main>
+
+   <footer>
+      <p>&copy; 2025 Librería Online - Todos los derechos reservados.</p>
+      <script src="../js/carrito.js"></script>
+   </footer>
+
+</body>
+
+</html>

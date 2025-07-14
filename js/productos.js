@@ -1,0 +1,14 @@
+
+export function obtenerProductos() {
+    const productos = [
+        { id: 1, name: 'El principito', description: 'Un clásico sobre la vida y la amistad.', amount: 15000 },
+        { id: 2, name: 'Harry Potter y la piedra filosofal', description: 'El inicio de una saga mágica.', amount: 30000 },
+        { id: 3, name: 'Los juegos del hambre', description: 'Distopía y revolución.', amount: 30000 },
+        { id: 4, name: 'El eternauta', description: 'Historieta de ciencia ficción argentina.', amount: 30000 },
+        { id: 5, name: 'Atlas de anatomía humana', description: 'Recurso visual para estudiantes.', amount: 30000 },
+        { id: 6, name: 'Química general', description: 'Conceptos básicos para nivel universitario.', amount: 30000 }
+    ];
+
+    console.log(productos);
+    return productos;
+}
