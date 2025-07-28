@@ -4,7 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Libreria online</title>  
+   <title>Libreria online</title>
    <link rel="stylesheet" href="../css/estilos.css">
    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
@@ -28,10 +28,10 @@
                <a class="a1" href="../index.html">Inicio</a>
             </li>
             <li>
-               <a class="a2" href="./productos.html">Productos</a>
+               <a class="a2" href="../index.html">Productos</a>
             </li>
             <li>
-               <a class="a3" href="./contactos.html">Contacto</a>
+               <a class="a3" href="../index.html">Contacto</a>
             </li>
             <li>
                <a href="./carrito.html">Carrito</a>
@@ -44,16 +44,18 @@
       <div id="alert-container" class="container mt-3"></div>
       <section class="tableProduct" id="item-products">
          <h2>Sección de productos</h2>
-         <button onclick="limpiarCarrito()" class="add-to-cart">Limpiar carrito</button>
+         <!--<button onclick="limpiarCarrito()" class="add-to-cart">Limpiar carrito</button>-->
+         <button id="vaciarCarritoBtn" class="btn-limpiar">🗑 Vaciar carrito</button>
          <button onclick="FinalizarCompra()" class="add-to-cart">Finalizar compra</button>
       </section>
    </main>
 
    <footer>
       <p>&copy; 2025 Librería Online - Todos los derechos reservados.</p>
-      <script src="../js/carrito.js"></script>
+      
    </footer>
 
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <script src="../js/carrito.js"></script>
 </body>
-
 </html>

@@ -1,11 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title>Descripción del producto</title>
+   <link rel="stylesheet" href="../css/estilos.css">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-   <h1>Descripción completa del producto</h1>
+   <header>
+        <h1>El librero</h1>
+        <nav>
+            <ul>
+                <li><a class="a1" href="../index.html">Inicio</a></li>
+                <li><a class="a2" href="../index.html#productos">Productos</a></li>
+                <li><a class="a3" href="../index.html#contacto">Contacto</a></li>
+                <li><a class="a4" href="../index.html#resenas">Reseñas</a></li>
+                <li><a class="a5" href="./carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+        <div class="icon-carrito">
+            <a href="./carrito.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                          d="M16 6V4H8v2M7 18c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m10 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-9.8-3.2v-.1l.9-1.7h7.4c.7 0 1.4-.4 1.7-1l3.9-7l-1.7-1l-3.9 7h-7L4.3 2H1v2h2l3.6 7.6L5.2 14c-.1.3-.2.6-.2 1c0 1.1.9 2 2 2h12v-2H7.4c-.1 0-.2-.1-.2-.2" />
+                </svg>
+                <div class="count" id="cart-count">0</div>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="descripcion" class="productos">
+            <h2>Descripción completa del producto</h2>
+            <div id="detalle-producto" class="card-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Librería Online - Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const data = localStorage.getItem('descripcionProducto');
+            const contenedor = document.getElementById('detalle-producto');
+
+            if (data) {
+                const producto = JSON.parse(data);
+                contenedor.innerHTML = `
+                    <div class="card">
+                        <img src="${producto.image}" alt="${producto.name}">
+                        <h3>${producto.name}</h3>
+                        <p><strong>Precio:</strong> $${producto.amount}</p>
+                        <p><strong>Descripción:</strong> ${producto.description}</p>
+                    </div>
+                `;
+            } else {
+                contenedor.innerHTML = '<p>No se encontró información del producto.</p>';
+            }
+
+            // Mostrar cantidad de productos en carrito
+            const carrito = JSON.parse(localStorage.getItem('productos')) || [];
+            const totalItems = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+            document.getElementById('cart-count').innerText = totalItems;
+        });
+    </script>
 </body>
 </html>

@@ -263,8 +263,43 @@ form button:hover {
 .tableProduct .btn-eliminar:hover {
   background-color: #A3685F;
 }
+/*LIMPIAR CARRITO----------------------------------------------------------------*/
+.btn-limpiar {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(179, 100, 62, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
+.btn-limpiar:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+/*LIMPIAR CARRITO----------------------------------------------------------------*/
+/* VER DESCRIPCION----------------------------------------------------------------*/
+.btn-descripcion {
+  background-color: #5D3A00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 0.8rem;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(163, 104, 95, 0.3);
+  transition: background-color 0.3s ease;
+}
 
+.btn-descripcion:hover {
+  background-color: #A3685F;
+}
+/* VER DESCRIPCION----------------------------------------------------------------*/
 @media (max-width: 600px) {
   nav ul {
     flex-direction: column;
